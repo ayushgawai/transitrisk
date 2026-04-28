@@ -16,9 +16,9 @@ The model is **XGBoost (calibrated)**, chosen from a comparison of 7 models. It 
 
 ---
 
-## Quick Start — If You Have the Shared Files (Recommended)
+## Quick Start — For Friends (Recommended)
 
-> If someone shared a Google Drive link with you, use this path. No training needed — just download and run.
+> You will receive a zip file (`transitrisk_data_models.zip`) with the complete `data/` and `models/` folders. No training needed.
 
 ```bash
 # 1. Clone the repo
@@ -28,23 +28,16 @@ cd transitrisk
 # 2. Install dependencies
 pip install -r requirements.txt
 
-# 3. Download files from Google Drive and place them as follows:
-#
-#   data/processed/modeling_table.parquet    ← 13 MB
-#   data/processed/X_features.parquet        ← 24 MB
-#   models/knn.joblib                        ← 27 MB
-#   models/rf.joblib                         ← 9.8 MB
-#   models/svm_rbf.joblib                    ← 6 MB
-#
-#   See data/processed/DOWNLOAD_HERE.md and models/DOWNLOAD_HERE.md for details.
+# 3. Unzip the shared file and replace the data/ and models/ folders
+#    (drag and drop, or run:)
+unzip transitrisk_data_models.zip -d .
+#    This overwrites data/ and models/ with the complete files.
 
-# 4. Launch dashboard immediately — no training required
+# 4. Launch — no training required
 streamlit run app/dashboard.py
 ```
 
-The dashboard opens at **http://localhost:8501**.
-
-> **Why does training not re-run?** The Makefile checks if output files already exist before running each step. If models and features are already present, `make models` and `make features` print a skip message and exit. Only delete the `.joblib` or `.parquet` files if you actually want to retrain from scratch.
+The dashboard opens at **http://localhost:8501**. Done.
 
 ---
 
