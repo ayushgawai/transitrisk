@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.Python
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Large data files (regenerate with: make data && make features)
+data/raw/transit_events.parquet
+data/processed/transit_events_cleaned.parquet
+data/processed/X_features.parquet
+data/processed/modeling_table.parquet
+
+# Large model files (regenerate with: make models)
+# kNN and RF are excluded due to size (27MB / 9.8MB)
+models/knn.joblib
+models/rf.joblib
+models/svm_rbf.joblib
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+.venv
+venv/
+env/
+
+# IDE
+.idea/
+.vscode/
+*.swp
